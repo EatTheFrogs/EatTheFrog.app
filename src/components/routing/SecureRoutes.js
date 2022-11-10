@@ -36,6 +36,13 @@ export const SecureRoutes = () => {
     const [navHovered, setNavHovered] = useState(false);
     const appContextValue = { goals, setGoals, currentGoal, setCurrentGoal, user, setUser, isLoading, setIsLoading, scrollable, setScrollable, navHovered, setNavHovered };
 
+    useEffect(() => {
+        if(scrollable) {
+            window.scrollTo(0, 0);
+        }
+    }, [scrollable]);
+
+
     const onAuthRequired = () => {
         navigate('/login');
     };
