@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh '''
                     echo Generating production build for "$REPO_NAME"
+                    npm install
                     npm run build
                     echo Copying production build to html directory
                     cp -a ./build/. "$ETF_HTML_DIRECTORY"
