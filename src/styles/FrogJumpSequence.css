@@ -1,0 +1,9 @@
+.frog-jump-image-container {
+    min-width: 10rem;
+    height: 8rem;
+}
+
+.frog-jump-image {
+    height: 5rem;
+    width: auto;
+}

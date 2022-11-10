@@ -1,0 +1,12 @@
+.page {
+    align-items: center;
+    justify-items: center;
+}
+
+#login-title:hover {
+    cursor: pointer;
+}
+
+#okta-sign-in {
+    margin: 0 auto
+}

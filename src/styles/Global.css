@@ -1,0 +1,322 @@
+* {
+    font-family: Rubik, KGBrokenVesselsSketch, serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: 'KGBrokenVesselsSketch';
+    src: local('KGBrokenVesselsSketch'), url(../fonts/KGBrokenVesselsSketch.ttf) format('truetype');
+    font-style: normal;
+}
+
+:root {
+    --white: rgb(255, 255, 255);
+    --grey-white: rgb(241, 241, 241);
+    --light-grey: rgb(226 226 226);
+    --grey: rgb(177 177 177);
+    --light-black: rgb(56, 56, 56);
+    --medium-black: rgb(44, 44, 44);
+    --black: rgb(0, 0, 0);
+    --green: rgb(33,107,67);
+    --light-green: rgb(61, 167, 110);
+    --kermit-green: rgb(155,158,55);
+    --chalk-yellow: rgb(240, 236, 139);
+    --red: rgba(254, 55, 55, 0.768);
+    --brown: #5d390f;
+  }
+
+.white {
+    background-color: var(--white);
+}
+
+.grey-white {
+    background-color: var(--grey-white);
+}
+
+.light-grey {
+    background-color: var(--light-grey);
+}
+
+.grey {
+    background-color: var(--grey);
+}
+
+.light-black {
+    background-color: var(--light-black);
+}
+
+.medium-black {
+    background-color: var(--medium-black);
+}
+
+.black {
+    background-color: var(--black);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.light-green {
+    background-color: var(--light-green);
+}
+
+.kermit-green {
+    background-color: var(--kermit-green);
+}
+
+.chalk-yellow {
+    color: var(--chalk-yellow);
+}
+
+.chalk-font {
+    font-family: KGBrokenVesselsSketch;
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.brown {
+    background-color: var(--brown);
+}
+
+button {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: .2rem;
+    margin: .2rem 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: rgb(239, 239, 239) !important;
+    color: rgb(103, 103, 103)  !important;
+    cursor: default;
+}
+
+input[type=submit]:disabled {
+    background-color: rgb(239, 239, 239) !important;
+    color: rgb(103, 103, 103)  !important;
+    cursor: default;
+}
+
+input {
+    outline: none;
+}
+
+input[type=text] {
+    background-color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+select {
+    cursor: pointer;
+    outline: none;
+}
+
+/*
+    Positioning Classes
+*/
+.content {
+    width: 100%;
+    height: fit-content;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+}
+
+.frog-background {
+    background-image: url(FrogSkin.png), linear-gradient(to right top, #2e9612, #279120, #218b29, #1c8630, #198036, #187d3c, #187a41, #1a7746, #1e764c, #247452, #2a7357, #31715b);
+    background-size: auto, cover;
+}
+
+.page-header {
+    padding: 10rem 10vw 0 10vw;
+}
+
+.page-main {
+    padding: 0 10vw;
+}
+
+.popup-container-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(19, 19, 19, 0.838);
+    padding: 2%;
+}
+
+.popup-container {
+    max-width: min(95vw, 500px);
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.5rem;
+    position: relative;
+    max-height: calc(95vh - 100px);
+    margin-top: 100px;
+}
+
+.popup-container-inner {
+    padding: 1.5rem;
+    position: relative;
+    height: auto;
+    overflow: scroll;
+}
+
+.popup-container-background-2 {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 51;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(19, 19, 19, 0.838);
+    padding: 2%;
+}
+
+.popup-container-2 {
+    max-width: min(95vw, 500px);
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: scroll;
+    position: relative;
+    max-height: calc(100vh - 140px);
+    margin-top: 140px;
+}
+
+.delete-popup-container-background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 53;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(19, 19, 19, 0.838);
+    padding: 2%;
+}
+
+.delete-popup-container {
+    max-width: min(95vw, 500px);
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: scroll;
+    position: relative;
+    max-height: calc(100vh - 110px);
+    margin-top: 140px;
+}
+
+.delete-popup-message {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1250px) {
+    .page-header {
+        padding: 10rem 2vw 0 2vw;
+    }
+
+    .page-main {
+        padding: 0 10vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .popup-container {
+        margin-top: 100px;
+        min-width: 96vw;
+    }
+
+    .popup-container-inner {
+        padding: 1rem;
+    }
+    
+    .popup-container-2 {
+        max-height: calc(100vh - 110px);
+        margin-top: 100px;
+        min-width: 96vw;
+    }
+    
+    .delete-popup-container {
+        max-height: calc(100vh - 110px);
+        margin-top: 115px;
+        min-width: 96vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .page-header {
+        padding-top: 7rem;
+    }
+}

@@ -1,0 +1,570 @@
+.events-page .page-header {
+    padding: 6rem 0 0 0;
+}
+
+.events-page #goals-header-container {
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(10, 4vh);
+}
+
+#kermit-presenting {
+    grid-column-start: 2;
+    grid-row: 5 / 11;
+
+    position: relative;
+    z-index: 3;
+    width: auto;
+    height: 100%;
+}
+
+#chalkboard {
+    grid-column: 3 / 19;
+    grid-row: 1 / 9;
+
+    background-color: #151515;
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    border: 10px solid var(--brown);
+    box-shadow: inset -1px 2px 2px #404040, 6px 9px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#goal-select-prefix {
+    grid-column: 3 / 19;
+    grid-row-start: 1;
+
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-family: KGBrokenVesselsSketch;
+    font-size: 1.1rem;
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+#edit-goal-container {
+    grid-column: 3 / 19;
+    grid-row: 8 / 9;
+
+    position: relative;
+    z-index: 5;
+    padding-bottom: 1.2rem;
+    padding-right: 1.4rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+#edit-goal {
+    color: white;
+    font-family: KGBrokenVesselsSketch;
+    font-size: 1.7rem;
+    text-align: right;
+    width: fit-content;
+    float: right;
+}
+
+#edit-goal:hover {
+    cursor: pointer;
+    animation: wiggle .5s ease-in-out;
+}
+
+#current-goal-container {
+    grid-column: 3 / 19;
+    grid-row: 1 / 9;
+
+    position: relative;
+    z-index: 2;
+    color: var(--chalk-yellow);
+}
+
+#current-goal-container-text {
+    margin: 0 auto;
+    min-height: fit-content;
+    width: fit-content;
+    /* padding-bottom: 1rem; */
+}
+
+#current-goal-name {
+    font-family: KGBrokenVesselsSketch;
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+#current-goal-description {
+    font-family: KGBrokenVesselsSketch;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#goal-select-container {
+    position: relative;
+    z-index: 5;
+    width: fit-content;
+    margin: -1.75rem auto 0 auto;
+    padding: .3rem .5rem;
+    background-color: var(--kermit-green);
+    border-radius: .5rem;
+    max-width: 95%;
+}
+
+#goal-select-label {
+    color: black;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#goal-select {
+    height: 2.2rem;
+    font-size: 1.1rem;
+    padding-top: .2rem;
+}
+
+#add-edit-goal-container {
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+#goal-input-log-container {
+    background-color: rgb(234, 234, 234);
+    border-top: 5px solid var(--kermit-green);
+    height: fit-content;
+    min-height: calc(60vh - 6rem);
+}
+
+#no-goals-exist {
+    background-color: rgb(234, 234, 234);
+    border-top: 5px solid var(--kermit-green);
+    height: fit-content;
+    min-height: calc(60vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+#no-goals-exist-link {
+    color: rgb(0, 149, 255);
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+#no-goals-exist-link:hover {
+    color: rgb(60, 174, 255);
+    cursor: pointer;
+}
+
+#add-goal-event-container {
+    width: 100%;
+    background-color: rgb(155,158,55);
+
+    justify-content: space-evenly;
+}
+
+#goal-input-log-inner {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-goal-event-button {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-goal-event-button {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-goal-event-button:hover .add-goal-event-button-plus-sign {
+    transform: rotate(90deg);
+}
+
+.add-goal-event-button-plus-sign {
+    height: 30%;
+    width: auto;
+    padding: 0 1rem;
+    transition: transform .5s;
+}
+
+.add-goal-event-button-label{
+    color: rgb(82,77,72);
+    font-size: 2.5rem;
+    padding: 0 .7rem;
+    margin: 0;
+}
+
+.event-log-card {
+    width: 95%;
+    height: 8rem;
+    background-color: white;
+    border: 1px solid black;
+    margin: 1rem auto;
+    border-radius: .3rem;
+    box-shadow: 2px 2px 3px rgba(3, 3, 3, 0.732);
+}
+
+.event-log-card:hover {
+    cursor: pointer;
+    border: 2px solid rgb(82,77,72);
+    box-shadow: 4px 4px 3px rgba(3, 3, 3, 0.499);
+}
+
+.event-log-card-title {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.event-log-card-date {
+    color: rgb(82,77,72);
+}
+
+.no-templates-warning {
+    max-width: 500px;
+}
+
+#date-label {
+    padding-top: .4rem;
+    margin-right: .7rem;
+}
+
+.react-date-picker__calendar .react-calendar {
+    width: 300px !important;
+    position: fixed;
+    left: calc(50vw - 150px);
+    background-color: rgb(243, 243, 243);
+    z-index: 200;
+}
+
+.date-picker {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+}
+
+.react-date-picker__inputGroup {
+    min-width: fit-content !important;
+}
+
+.react-calendar__navigation button {
+    width: 40px;
+}
+
+.react-calendar__tile {
+    font-size: 1rem;
+}
+
+.react-calendar__navigation button {
+    min-height: fit-content;
+}
+
+.events-page #template-select-container {
+    padding-top: 0;
+    margin: 1.5rem 0;
+    display: block;
+}
+
+.events-page #template-select-label {
+    margin-bottom: .5rem;
+}
+
+.events-page .input-row-container {
+    text-align: left;
+}
+
+.events-page .input-row-wrapper {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    margin: 0;
+}
+
+.wide-input-row {
+    padding: .5rem;
+    width: 13rem;
+}
+
+#add-lift-button {
+    color: white;
+    width: 100%;
+}
+
+.events-page .input-row-label {
+    float: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.events-page .input-row-unit {
+    padding: .3rem;
+    display: inline-block;
+}
+
+.liftsets-table-header .input-row-label {
+    margin-bottom: 0;
+}
+
+.liftsets-table-header {
+    display: grid;
+    grid-template-columns: 40% 40% 10%;
+    column-gap: 5%;
+    height: fit-content;
+    margin-top: .5rem;
+}
+
+.liftsets-table .input-row-container {
+    padding-top: 0;
+}
+
+.input-row-duration-container {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.input-row-duration-label {
+    margin-bottom: .5rem;
+}
+
+.input-row-duration-group {
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.input-row-duration-group .input-row {
+    width: 3.2rem;
+    padding: .5rem .2rem;
+}
+
+.events-page .popup-buttons {
+    margin-top: 1rem;
+}
+
+.cancel-popup-button {
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: .5rem 1rem;
+    z-index: 5;
+    border-radius: 0 0.5rem 0 0;
+}
+
+.events-page .kermit-png {
+    width: 60%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.kermit-lift {
+    width: 40%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.kermit-sad {
+    width: 40%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.lift-dropdown {
+    width: 96%;
+    margin: 0 auto;
+    padding: 0.8rem;
+    box-shadow: inset 0 1px 1px;
+    border-radius: 0 0 .3rem .3rem;
+}
+
+.lift-dropdown-inner {
+    padding: 0;
+}
+
+#lift-select-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: .5rem;
+    background-color: transparent;
+}
+
+#lift-select-label {
+    color: black;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+#lift-select {
+    height: 2.2rem;
+    font-size: 1.1rem;
+    padding-top: .4rem;
+}
+
+.lift-select-row-container {
+    width: 100%;
+}
+
+.lift-select-row {
+    width: 100%;
+    height: 2rem;
+    margin-top: .8rem;
+    border-radius: .3rem;
+    box-shadow: 1px 1px 2px;
+    z-index: 5;
+}
+
+.lift-select-row:hover {
+    cursor: pointer;
+}
+
+.lift-select-row-name {
+    
+}
+
+.lift-select-caret {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 1700px) {
+    #current-goal-name {
+        font-size: 5rem;
+    }
+    
+    #current-goal-description {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    #kermit-presenting {
+        grid-column-start: 1;
+    }
+
+    #current-goal-name {
+        font-size: 4.5rem;
+    }
+    
+    #current-goal-description {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #current-goal-container {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    #current-goal-name {
+        font-size: 4rem;
+    }
+    
+    #current-goal-description {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .events-page #goal-input-log-inner {
+        padding: 1rem 2vw;
+    }
+
+    #current-goal-name {
+        font-size: 3rem;
+    }
+
+    #kermit-presenting {
+        grid-row: 7 / 11;
+    }
+
+    #current-goal-container {
+        padding-bottom: 3rem;
+    }
+
+    .add-goal-event-button-plus-sign {
+        height: 20%;
+    }
+    
+    .add-goal-event-button-label{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #current-goal-name {
+        font-size: 2rem;
+    }
+
+    #edit-goal {
+        font-size: 1.2rem;
+    }
+
+    .add-goal-event-button-label{
+        font-size: 1.5rem;
+    }
+
+    .add-goal-event-button-plus-sign {
+        height: 15%;
+    }
+
+    .event-log-card-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .add-goal-event-button-plus-sign {
+        margin-bottom: -2rem;
+    }
+
+    .events-page #template-select-container {
+        margin-bottom: 0;
+    }
+
+    .events-page .input-row-wrapper {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .event-log-card-title {
+        font-size: 1.2rem;
+    }
+}
+
+@keyframes wiggle {
+    20% {
+      transform: rotate(2deg);
+    }
+    
+    40% {
+      transform: rotate(-2deg);
+    }
+    
+    60% {
+      transform: rotate(2deg);
+    }
+    
+    80% {
+      transform: rotate(-2deg);
+    }
+    
+    100% {
+      transform: rotate(0deg);
+    }
+  }

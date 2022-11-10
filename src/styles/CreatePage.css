@@ -1,0 +1,11 @@
+.create-page .title {
+    color: rgb(22, 22, 22);
+}
+
+.create-page #user-icon-path {
+    fill: black;
+}
+
+#main {
+    margin-bottom: 2rem;
+}
