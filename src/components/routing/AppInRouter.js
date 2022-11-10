@@ -31,9 +31,19 @@ export const AppInRouter = () => {
 
     useEffect(() => {
         if(scrollable) {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflowY = 'unset';
+            document.body.style.position = 'relative';
+            document.body.style.height = '100%';
+            document.html.style.overflowY = 'unset';
+            document.html.style.position = 'relative';
+            document.html.style.height = '100%';
         } else {
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflowY = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.height = '100%';
+            document.html.style.overflowY = 'hidden';
+            document.html.style.position = 'fixed';
+            document.html.style.height = '100%';
         }
     }, [scrollable]);
 

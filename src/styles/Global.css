@@ -11,6 +11,11 @@
     display: none;
 }
 
+body {
+    touch-action: none;
+    -ms-touch-action: none;
+}
+
 @font-face {
     font-family: 'KGBrokenVesselsSketch';
     src: local('KGBrokenVesselsSketch'), url(../fonts/KGBrokenVesselsSketch.ttf) format('truetype');
