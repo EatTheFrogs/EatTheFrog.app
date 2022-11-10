@@ -34,16 +34,16 @@ export const AppInRouter = () => {
             document.body.style.overflowY = 'unset';
             document.body.style.position = 'relative';
             document.body.style.height = '100%';
-            document.html.style.overflowY = 'unset';
-            document.html.style.position = 'relative';
-            document.html.style.height = '100%';
+            document.style.overflowY = 'unset';
+            document.style.position = 'relative';
+            document.style.height = '100%';
         } else {
             document.body.style.overflowY = 'hidden';
             document.body.style.position = 'fixed';
             document.body.style.height = '100%';
-            document.html.style.overflowY = 'hidden';
-            document.html.style.position = 'fixed';
-            document.html.style.height = '100%';
+            document.style.overflowY = 'hidden';
+            document.style.position = 'fixed';
+            document.style.height = '100%';
         }
     }, [scrollable]);
 
