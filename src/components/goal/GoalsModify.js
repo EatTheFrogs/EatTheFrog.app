@@ -81,16 +81,8 @@ export const GoalsModify = () => {
     }, [currentGoal]);
 
     useEffect(() => {
-        setScrollable(!showEventTemplatePopup);
-    }, [showEventTemplatePopup]);
-
-    useEffect(() => {
-        setScrollable(!editGoalNameDescription);
-    }, [editGoalNameDescription]);
-
-    useEffect(() => {
-        setScrollable(!showDeletePopup);
-    }, [showDeletePopup]);
+        setScrollable(!(editGoalNameDescription || showEventTemplatePopup || showDeletePopup));
+    }, [editGoalNameDescription, showEventTemplatePopup, showDeletePopup]);
 
     useEffect(() => {
         validateEditedGoal()

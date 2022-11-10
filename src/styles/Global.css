@@ -90,6 +90,7 @@
 }
 
 button {
+    color: black;
     font-size: 1.3rem;
     font-weight: 500;
     padding: .2rem;
@@ -133,6 +134,7 @@ input:focus {
 }
 
 select {
+    color: black;
     cursor: pointer;
     outline: none;
 }

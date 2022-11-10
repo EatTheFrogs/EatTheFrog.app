@@ -2,11 +2,6 @@ import React, { useState, useContext, useEffect } from 'react';
 import { AppContext } from '../routing/SecureRoutes';
 import '../../styles/GoalsCreateModify.css'
 
-// {
-//     "reps": 10,
-//     "weight": 135
-// }
-
 export const LiftEventFieldSet = ({ index, edit, liftSet, updateSetsForSet, deleteLiftSet }) => {
 
     const { setGoals, user, setIsLoading, setScrollable } = useContext(AppContext);

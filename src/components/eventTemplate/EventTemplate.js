@@ -34,7 +34,7 @@ export const EventTemplate = ({ eventTemplate }) => {
     }, [eventTemplate]);
 
     useEffect(() => {
-        setScrollable(!(showTemplateNamePopup || showTemplateFieldPopup, showDeletePopup));
+        setScrollable(!(showTemplateNamePopup || showTemplateFieldPopup || showDeletePopup));
     }, [showTemplateNamePopup, showTemplateFieldPopup, showDeletePopup]);
 
     const editTemplateClicked = (e) => {

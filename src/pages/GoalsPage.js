@@ -9,7 +9,6 @@ import '../styles/GoalsPage.css';
 export const GoalsPage = () => {
 
     const { goals, setGoals, user, isLoading, setIsLoading, setScrollable, setNavHovered } = useContext(AppContext);
-    const [showEventTemplatePopup, setShowEventTemplatePopup] = useState(false);
 
     useEffect(() => {
         setScrollable(true);
@@ -40,7 +39,7 @@ export const GoalsPage = () => {
         (
             <div className="page goals-page frog-background">
                 <div className="page-header padding-bottom" id="goals-header-container">
-                    <GoalsCreateModify showEventTemplatePopup={showEventTemplatePopup} setShowEventTemplatePopup={setShowEventTemplatePopup}/>
+                    <GoalsCreateModify/>
                 </div>
             </div>
         )
