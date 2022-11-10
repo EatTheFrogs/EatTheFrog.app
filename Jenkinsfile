@@ -16,7 +16,6 @@ pipeline {
             steps {
                 sh '''
                     echo Generating production build for "$REPO_NAME"
-                    rm -rf package-lock.json
                     npm install
                     npm run build
                     echo Copying production build to html directory
