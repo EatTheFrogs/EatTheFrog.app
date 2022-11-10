@@ -13,9 +13,6 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when {
-                buildingTag()
-            }
             steps {
                 sh '''
                     echo Generating production build for "$REPO_NAME"
