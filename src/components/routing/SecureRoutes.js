@@ -42,7 +42,6 @@ export const SecureRoutes = () => {
         }
     }, [scrollable]);
 
-
     const onAuthRequired = () => {
         navigate('/login');
     };
