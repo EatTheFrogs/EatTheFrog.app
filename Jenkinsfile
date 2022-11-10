@@ -15,9 +15,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    echo Generating production build for "$REPO_NAME"
+                    echo Installing node_modules for "$REPO_NAME"
                     npm install
+                    echo Generating production build for "$REPO_NAME"
                     npm run build
+                    echo Deleting previous build files
+                    find "$ETF_HTML_DIRECTORY" -type f -exec rm {} +
                     echo Copying production build to html directory
                     cp -a ./build/. "$ETF_HTML_DIRECTORY"
                 '''
