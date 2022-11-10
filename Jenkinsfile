@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         REPO_NAME = scm.getUserRemoteConfigs()[0].getUrl().tokenize('/').last().split("\\.git")[0].toLowerCase()
+    }
     stages {
         stage ('Initialize') {
             steps {
