@@ -221,7 +221,7 @@ select {
     background-color: white;
     border-radius: 0.5rem;
     position: relative;
-    max-height: calc(95vh - 100px);
+    max-height: calc(85vh - 100px);
     margin-top: 100px;
 }
 
@@ -258,7 +258,7 @@ select {
     border-radius: 0.5rem;
     overflow: scroll;
     position: relative;
-    max-height: calc(100vh - 140px);
+    max-height: calc(85vh - 100px);
     margin-top: 140px;
 }
 
@@ -288,7 +288,7 @@ select {
     border-radius: 0.5rem;
     overflow: scroll;
     position: relative;
-    max-height: calc(100vh - 110px);
+    max-height: calc(85vh - 100px);
     margin-top: 140px;
 }
 
