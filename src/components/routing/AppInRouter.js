@@ -39,18 +39,22 @@ export const AppInRouter = () => {
 
         if(scrollable) {
             bodayTagStyle.overflowY = 'unset';
-            bodayTagStyle.position = 'relative';
-            bodayTagStyle.height = '100%';
+            bodayTagStyle.position = 'unset';
+            bodayTagStyle.height = 'unset';
+            bodayTagStyle.touchAction = 'unset';
             htmlTagStyle.overflowY = 'unset';
-            htmlTagStyle.position = 'relative';
-            htmlTagStyle.height = '100%';
+            htmlTagStyle.position = 'unset';
+            htmlTagStyle.height = 'unset';
+            htmlTagStyle.touchAction = 'unset';
         } else {
             bodayTagStyle.overflowY = 'hidden';
             bodayTagStyle.position = 'fixed';
             bodayTagStyle.height = '100%';
+            bodayTagStyle.touchAction = 'none';
             htmlTagStyle.overflowY = 'hidden';
             htmlTagStyle.position = 'fixed';
             htmlTagStyle.height = '100%';
+            htmlTagStyle.touchAction = 'none';
         }
     }, [scrollable]);
 
