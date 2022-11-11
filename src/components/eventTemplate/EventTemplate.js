@@ -86,7 +86,7 @@ export const EventTemplate = ({ eventTemplate }) => {
                     null
             }
             <p className="event-template-fields-header">Template Fields</p>
-            <button id="add-event-field-button" onClick={addEventTemplateFieldClicked}>+ Add New Field to Template</button>
+            <button className="dark-black" id="add-event-field-button" onClick={addEventTemplateFieldClicked}>+ Add New Field to Template</button>
             {
                 showTemplateFieldPopup ?
                 (

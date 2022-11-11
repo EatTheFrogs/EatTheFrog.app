@@ -128,7 +128,7 @@ export const LiftEventTemplateFieldPopup = ({ eventField, templateId, goalId, se
                             :
                                 null
                         }
-                        <button className="light-black" id="add-liftset-button" onClick={addLiftSetClicked}>+ Add Lift Set</button>
+                        <button className="dark-black" id="add-liftset-button" onClick={addLiftSetClicked}>+ Add Lift Set</button>
                         <div className="popup-buttons flex-row">
                             <button className="popup-button red" onClick={cancelClick}>Cancel</button>
                             <button className="popup-button light-green" onClick={saveFieldClicked} disabled={!valid}>Save Field</button>

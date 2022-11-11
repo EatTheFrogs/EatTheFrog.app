@@ -34,6 +34,7 @@ body {
     --grey: rgb(177 177 177);
     --light-black: rgb(56, 56, 56);
     --medium-black: rgb(44, 44, 44);
+    --dark-black: rgb(38, 38, 38);
     --black: rgb(0, 0, 0);
     --green: rgb(33,107,67);
     --light-green: rgb(61, 167, 110);
@@ -65,6 +66,10 @@ body {
 
 .medium-black {
     background-color: var(--medium-black);
+}
+
+.dark-black {
+    background-color: var(--dark-black);
 }
 
 .black {

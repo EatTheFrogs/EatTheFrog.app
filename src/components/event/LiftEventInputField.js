@@ -96,7 +96,7 @@ export const LiftEventInputField = ({ index, field, event, setInitialLoad, setSh
                         sets?.map((set, index) => <LiftEventFieldSet key={index} index={index} edit={true} liftSet={set} updateSetsForSet={updateSetsForSet} deleteLiftSet={deleteLiftSet}/>)
                     }
                 </div>
-                <button className="light-black" id="add-liftset-button" onClick={addLiftSetClicked}>+ Add Lift Set</button>
+                <button className="dark-black" id="add-liftset-button" onClick={addLiftSetClicked}>+ Add Lift Set</button>
                 <button className="light-green" id="save-lift-button" onClick={saveLiftClicked}>Save Lift</button>
             </div>
         </div>

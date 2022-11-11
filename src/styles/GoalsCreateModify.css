@@ -302,7 +302,7 @@
 }
 
 #add-event-field-button {
-    background-color: rgb(38, 38, 38);
+    background-color: var(--dark-black);
     border-radius: .5rem;
     color: white;
     padding: .4rem;
@@ -319,7 +319,7 @@
 }
 
 #add-liftset-button {
-    background-color: rgb(38, 38, 38);
+    background-color: var(--dark-black);
     border-radius: 0.5rem;
     color: white;
     padding: 0.4rem;

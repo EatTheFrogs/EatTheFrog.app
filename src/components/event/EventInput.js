@@ -219,7 +219,7 @@ export const EventInput = ({ event, setEdit, setShowEventPopup, setInitialLoad, 
                     {
                         event.type === LIFT_TYPE ?
                         <>
-                            <button className="popup-button light-black" id="add-lift-button" onClick={addLiftClicked}>+ Add Lift</button>
+                            <button className="popup-button dark-black" id="add-lift-button" onClick={addLiftClicked}>+ Add Lift</button>
                             <LiftSelect event={event} liftEventFields={fields} currentLiftId={liftId} 
                                 newLiftSelected={newLiftSelected} setInitialLoad={setInitialLoad}
                                 setShowEventPopup={setShowEventPopup}/>
@@ -237,7 +237,7 @@ export const EventInput = ({ event, setEdit, setShowEventPopup, setInitialLoad, 
                             updateDurationForIndex={updateDurationForIndex} deleteEventFieldClicked={deleteEventFieldClicked}/>
                     )
                 }
-                    <button className="popup-button light-black" id="add-lift-button" onClick={addFieldClicked}>+ Add Field</button>
+                    <button className="popup-button dark-black" id="add-lift-button" onClick={addFieldClicked}>+ Add Field</button>
                 </>
                 : null 
             }

@@ -184,7 +184,7 @@ export const GoalsModify = () => {
                         <p id="event-config-header-title">Event Configuration</p>
                         <p id="event-config-header-description">In order to track progress for your goals, you will need to create events. Setting up reusable event templates here will make the process of logging completed events much easier! Configure event templates below with whatever fields you deem necesary. E.g., if your goal is running you may want to create an "Outdoor Run" template with a "distance" field of type "number" and a "time" field of type "duration".</p>
                     </div>
-                    <button id="add-event-template-button" className="light-black" onClick={addEventTemplate}>+ Add New Event Template</button>
+                    <button id="add-event-template-button" className="dark-black" onClick={addEventTemplate}>+ Add New Event Template</button>
                     {
                         (currentGoal?.eventTemplates != null) && (currentGoal.eventTemplates.length > 0) && (currentTemplateId != null) ?
                             <EventTemplateSelect eventTemplates={currentGoal.eventTemplates} currentTemplateId={currentTemplateId}  newTemplateSelected={newTemplateSelected}/>
