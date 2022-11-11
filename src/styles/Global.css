@@ -11,6 +11,11 @@
     display: none;
 }
 
+html,body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
 body {
     touch-action: none;
     -ms-touch-action: none;
