@@ -30,20 +30,27 @@ export const AppInRouter = () => {
     }, [oktaAuth, authState]);
 
     useEffect(() => {
+        let htmlTagStyle = document?.getElementsByTagName('html')?.[0]?.style;
+        let bodayTagStyle = document?.body?.style;
+
+        if(htmlTagStyle == null || bodayTagStyle == null) {
+            return;
+        }
+
         if(scrollable) {
-            document.body.style.overflowY = 'unset';
-            document.body.style.position = 'relative';
-            document.body.style.height = '100%';
-            document.style.overflowY = 'unset';
-            document.style.position = 'relative';
-            document.style.height = '100%';
+            bodayTagStyle.overflowY = 'unset';
+            bodayTagStyle.position = 'relative';
+            bodayTagStyle.height = '100%';
+            htmlTagStyle.overflowY = 'unset';
+            htmlTagStyle.position = 'relative';
+            htmlTagStyle.height = '100%';
         } else {
-            document.body.style.overflowY = 'hidden';
-            document.body.style.position = 'fixed';
-            document.body.style.height = '100%';
-            document.style.overflowY = 'hidden';
-            document.style.position = 'fixed';
-            document.style.height = '100%';
+            bodayTagStyle.overflowY = 'hidden';
+            bodayTagStyle.position = 'fixed';
+            bodayTagStyle.height = '100%';
+            htmlTagStyle.overflowY = 'hidden';
+            htmlTagStyle.position = 'fixed';
+            htmlTagStyle.height = '100%';
         }
     }, [scrollable]);
 
