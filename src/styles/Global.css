@@ -203,8 +203,8 @@ select {
 }
 
 .popup-container-background {
-    width: max(100%, 100vw);
-    height: max(100%, 100vh);
+    min-width: max(100%, 100vw);
+    min-height: max(100%, 100vh);
     position: absolute;
     top: 0;
     left: 0;
@@ -238,8 +238,8 @@ select {
 }
 
 .popup-container-background-2 {
-    width: max(100%, 100vw);
-    height: max(100%, 100vh);
+    min-width: max(100%, 100vw);
+    min-height: max(100%, 100vh);
     position: fixed;
     top: 0;
     left: 0;
